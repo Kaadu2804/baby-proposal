@@ -3,18 +3,58 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Surprise Proposal</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Proposal</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+        }
+        .container {
+            text-align: center;
+            padding: 30px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        h1 {
+            font-size: 2em;
+            margin-bottom: 20px;
+        }
+        button {
+            font-size: 1em;
+            padding: 10px 20px;
+            margin: 10px;
+            cursor: pointer;
+            border: none;
+            border-radius: 5px;
+        }
+        .accept {
+            background-color: #28a745;
+            color: white;
+        }
+        .decline {
+            background-color: #dc3545;
+            color: white;
+        }
+    </style>
 </head>
 <body>
-    <div class="gift-box" id="giftBox">🎁</div>
-    <div class="message-box" id="messageBox">
-        <div class="message" id="proposalMessage">In your arms, I've found my home,<br>Where love and laughter freely roam.<br>Together forever, let's make our start,<br>Will you marry me and fill my life with heart?</div>
-        <div class="buttons">
-            <button class="button approve" onclick="handleApprove()">Approve</button>
-            <button class="button decline" onclick="handleDecline()">Decline</button>
-        </div>
+    <div class="container">
+        <h1>I love you, will you marry me?</h1>
+        <button class="accept" onclick="displayMessage('You have accepted! I am the happiest person alive!')">Accept</button>
+        <button class="decline" onclick="displayMessage('You have declined. That’s okay, I still love you!')">Decline</button>
     </div>
-    <script src="script.js"></script>
+
+    <script>
+        function displayMessage(message) {
+            const container = document.querySelector('.container');
+            container.innerHTML = `<h1>${message}</h1>`;
+        }
+    </script>
 </body>
 </html>
