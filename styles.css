@@ -1,0 +1,64 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f0f0f0;
+    font-family: Arial, sans-serif;
+}
+
+.gift-box {
+    width: 200px;
+    height: 200px;
+    background-color: #ff69b4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+.gift-box:hover {
+    transform: scale(1.1);
+}
+
+.message-box {
+    display: none;
+    text-align: center;
+}
+
+.message {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.buttons {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.button {
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.approve {
+    background-color: #4CAF50;
+    color: white;
+}
+
+.approve:hover {
+    background-color: #45a049;
+}
+
+.decline {
+    background-color: #f44336;
+    color: white;
+}
+
+.decline:hover {
+    background-color: #e53935;
+}
